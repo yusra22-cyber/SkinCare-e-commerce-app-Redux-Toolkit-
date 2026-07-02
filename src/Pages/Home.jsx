@@ -11,8 +11,10 @@ import Testimonials from '../components/Testimonials'
 import { reviews } from './data/Reviews'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
+import { useGetProductQuery } from '../features/api/apiSlice'
 
 function Home() {
+  useGetProductQuery()
   return (
     <motion.div 
       initial={{opacity:0, x:50}}
