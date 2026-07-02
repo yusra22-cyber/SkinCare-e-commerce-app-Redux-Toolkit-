@@ -1,16 +1,26 @@
-# React + Vite
+GlowCart — Skincare E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive skincare e-commerce application built with React.js, Redux Toolkit, and Tailwind CSS v4. Designed to showcase modern frontend development skills including RTK Query, state management, and smooth animations.
 
-Currently, two official plugins are available:
+🔗 Live Demo: skin-care-e-commerce-app-redux-tool.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+ Features
 
-## React Compiler
+Product Listing — Browse skincare products with category filters and search
+Product Detail Page — Detailed view with ingredients, benefits, ratings, and reviews
+Cart Management — Add, remove, and update quantities with Redux cartSlice
+Wishlist — Save favourite products with Redux wishListSlice
+RTK Query — Efficient data fetching 
+Animations — Smooth page transitions and micro-interactions with Framer Motion
+Fully Responsive — Optimized for mobile, tablet, and desktop
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Built to showcase RTK Query and modern React patterns
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tech Stack
+TechUsageReact.js + Vite -> Frontendframework
+ReduxToolkit -> State management 
+RTK Query -> Data fetching & caching
+Tailwind CSS v4 -> Styling
+Framer Motion -> Animations
+React Router v6 -> Client-side routing
+React Icons -> Icon library
