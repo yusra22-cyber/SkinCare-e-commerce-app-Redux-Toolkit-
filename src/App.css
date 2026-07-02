@@ -1,0 +1,14 @@
+@keyframes animate{
+  from{
+    transform: translate3d(0,0,0);
+  }
+  to{
+    transform: translate3d(-50%,0,0);
+  }
+}
+
+.continous-animate{
+  width: max-content;
+  animation: animate 50s linear infinite;
+  will-change: transform;
+}
