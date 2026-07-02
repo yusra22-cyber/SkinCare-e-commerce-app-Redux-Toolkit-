@@ -2,7 +2,7 @@ GlowCart — Skincare E-Commerce App
 
 A fully responsive skincare e-commerce application built with React.js, Redux Toolkit, and Tailwind CSS v4. Designed to showcase modern frontend development skills including RTK Query, state management, and smooth animations.
 
-🔗 Live Demo: skin-care-e-commerce-app-redux-tool.vercel.app
+🔗 Live Demo: https://skin-care-e-commerce-app-redux-tool.vercel.app/
 
  Features
 
