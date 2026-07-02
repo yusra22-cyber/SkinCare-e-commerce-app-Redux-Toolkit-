@@ -47,9 +47,9 @@ function Cart() {
                   key={item.id}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center gap-4 bg-white/50 backdrop-blur-md border border-white/50 p-4 rounded-2xl shadow-sm"
+                  className="flex flex-col sm:flex-row sm:items-center gap-4 bg-white/50 backdrop-blur-md border border-white/50 p-4 rounded-2xl shadow-sm"
                 >
-                  <img src={item.image} alt={item.name} className="w-20 h-20 rounded-xl object-cover bg-[#FAEDE9]" />
+                  <img src={item.image} alt={item.name} className="w-20 h-20 rounded-xl object-cover bg-[#FAEDE9] shrink-0" />
 
                   <div className="flex-1">
                     <h3 className="font-serif text-sm md:text-base text-[#4A2E2E]">{item.name}</h3>
@@ -57,6 +57,7 @@ function Cart() {
                   </div>
 
                   {/* Quantity control buttons */}
+                  <div className="flex items-center justify-between sm:justify-end gap-3 w-full sm:w-auto">
                   <div className="flex items-center gap-3 bg-white/60 rounded-full px-3 py-1.5 border border-white/60">
                     <button onClick={() => dispatch(decreaseQuantity({ id: item.id }))} className="text-[#4A2E2E] font-bold hover:text-[#D98E8E] transition">−</button>
                     <span className="text-sm text-[#4A2E2E] w-4 text-center">{item.quantity}</span>
@@ -64,12 +65,13 @@ function Cart() {
                   </div>
 
                     {/* quantity price shown */}
-                  <p className="text-sm font-medium text-[#4A2E2E] w-20 text-right">Rs. {item.price * item.quantity}</p>
+                  <p className="text-sm font-medium text-[#4A2E2E] min-w-[80px] text-right">Rs. {item.price * item.quantity}</p>
 
                      {/* Remove single items */}
                   <button onClick={() => dispatch(removeFromCart({ id: item.id }))} className="text-[#6B6580] hover:text-[#D98E8E] transition">
                     <FiTrash2 size={18} />
                   </button>
+                    </div>
                 </motion.div>
               ))}
 
