@@ -20,7 +20,7 @@ const cartSlice = createSlice({
 
         // remove from cart  reducer
         removeFromCart: (state,action)=>{
-            state.items=state.items.filter(item=>item.id !== action.payload)
+            state.items=state.items.filter(item=>item.id !== action.payload.id)
         },
 
         // increase the item quantity
