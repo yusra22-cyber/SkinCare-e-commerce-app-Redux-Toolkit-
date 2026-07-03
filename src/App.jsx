@@ -1,4 +1,4 @@
-import { lazy,Suspense, useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import './App.css'
 import { Route, Router, Routes, useLocation } from 'react-router-dom'
 import Home from './Pages/Home'
