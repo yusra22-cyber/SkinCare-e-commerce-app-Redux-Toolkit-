@@ -29,15 +29,15 @@ function PromoBannar() {
   {/* right side */}
    <div className="relative w-64 lg:w-84 xl:w-[24rem] h-100 lg:h-125 hidden md:block ml-auto shrink-0">
     <div className="absolute left-0 lg:left-0 top-1/2 -translate-y-1/2 w-48 h-64 lg:w-64 lg:h-80 overflow-hidden rounded-[45%_55%_35%_65%/55%_35%_65%_45%] shadow-lg">
-      <img src='/images/model.jpg' className='w-full h-full object-cover' alt="banner" loading="lazy" />
+      <img src='/images/model.jpg' className='w-full h-full object-cover' alt="banner1" loading="lazy" />
     </div>
 
     <div className="absolute left-40 lg:left-45 top-18 lg:top-10 w-34 h-34 lg:w-40 lg:h-40 overflow-hidden rounded-full shadow-lg border-4 border-white/60">
-      <img src='/images/model2.jpg' className='w-full h-full object-cover'alt="banner" loading="lazy"  />
+      <img src='/images/model2.jpg' className='w-full h-full object-cover'alt="banner2" loading="lazy"  />
     </div>
 
     <div className="absolute top-60 lg:top-65 left-30 lg:left-40 w-46 h-50 lg:w-56 lg:h-58 overflow-hidden rounded-[50%_50%_35%_65%/30%_70%_30%_70%] shadow-lg">
-      <img src='/images/model3.jpg' className='w-full h-full object-cover'alt="banner" loading="lazy"  />
+      <img src='/images/model3.jpg' className='w-full h-full object-cover'alt="banner3" loading="lazy"  />
     </div>
   </div>
 
