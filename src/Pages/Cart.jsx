@@ -49,7 +49,7 @@ function Cart() {
                   animate={{ opacity: 1, y: 0 }}
                   className="flex flex-col sm:flex-row sm:items-center gap-4 bg-white/50 backdrop-blur-md border border-white/50 p-4 rounded-2xl shadow-sm"
                 >
-                  <img src={item.image} alt={item.name} className="w-20 h-20 rounded-xl object-cover bg-[#FAEDE9] shrink-0" />
+                  <img src={item.image} alt={item.name} className="w-20 h-20 rounded-xl object-cover bg-[#FAEDE9] shrink-0" loading="lazy" />
 
                   <div className="flex-1">
                     <h3 className="font-serif text-sm md:text-base text-[#4A2E2E]">{item.name}</h3>
