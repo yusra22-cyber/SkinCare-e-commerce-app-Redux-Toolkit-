@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import {useGetProductQuery} from "../features/api/apiSlice"
 import ProductCard from './ProductCard'
 import { motion } from 'framer-motion'
@@ -12,16 +12,21 @@ function ProductData() {
     const searchDataFromUrl = searchParams.get("category") || "All"
     const [selcetCat, setSelectCat] = useState(searchDataFromUrl)
     const[visibleCount, setVisibleCount] = useState(12)
+    
+    const FilterItems = useMemo(()=>
+      selcetCat === "All"? data : data.filter(item=>item.category === selcetCat)
+    ,[data, selcetCat])  
 
     useEffect(()=>{
       setSelectCat(searchDataFromUrl)
     },[searchDataFromUrl])
     
+    
     if(isLoading) return<><Loader/></>
     if(isError) return<><p>{JSON.stringify(error)}</p></>
 
     const categories = ['All', ...new Set(data.map(item=>item.category))]
-    const FilterItems = selcetCat === "All"? data : data.filter(item=>item.category === selcetCat)
+    
 
   return (
     <>
