@@ -10,12 +10,12 @@ function ShopCatogry() {
     const ScrollProduct=useRef(null)
 
     const category=[
-        {name:"Serums", image:"/images/serum-product.jpg"},
-        {name:"Cleansers", image:"/images/cleanser-product.jpg"},
-        {name:"Moisturizers", image:"/images/moisturizer-product.jpg"},
-        {name:"Sunscreen", image:"/images/sunscreen-product.jpg"},
-        {name:"Toners", image:"/images/toner-product.jpg"},
-        {name:"Masks", image:"/images/mask-product.jpg"}
+        {name:"Serums", image:"/images/serum-product.jpg", altt:"serums"},
+        {name:"Cleansers", image:"/images/cleanser-product.jpg", altt:"cleansers"},
+        {name:"Moisturizers", image:"/images/moisturizer-product.jpg", altt="moisturizers"},
+        {name:"Sunscreen", image:"/images/sunscreen-product.jpg", altt="sunscreen"},
+        {name:"Toners", image:"/images/toner-product.jpg", altt="toners"},
+        {name:"Masks", image:"/images/mask-product.jpg", altt="masks"}
     ]
 
     const scroll = (direction) =>{
@@ -53,7 +53,7 @@ function ShopCatogry() {
                          to={`/products?category=${item.name}`}
                          className="relative flex justify-center items-center shrink-0 w-45 h-60 md:w-50 md:h-80 lg:w-80 lg:h-105 snap-start overflow-hidden "
                         >
-                        <img src={item.image} alt={item.name} className='w-full h-full object-cover'/>
+                        <img src={item.image} alt={item.altt} className='w-full h-full object-cover'/>
                         <span className='absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/70 backdrop-blur-md border border-white/60 px-6 py-2 md:px-8 md:py-2.5 rounded-full text-xs md:text-sm tracking-wide text-[#4A2E2E] shadow-md'>{item.name.toUpperCase()}</span>
                         </Link>
                     ))
