@@ -29,15 +29,10 @@ function Hero() {
        >
 
         {/* Small decorative accent chip above heading */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-          className="inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-white/60 rounded-full px-4 py-1.5 mb-4 shadow-sm"
-        >
+        <div className="inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-white/60 rounded-full px-4 py-1.5 mb-4 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-[#D98E8E] animate-pulse"></span>
           <span className="text-xs text-[#4A2E2E] font-medium">Loved by 10,000+ glowing customers</span>
-        </motion.div>
+        </div>
 
          {/* headings */}
         <p className='text-sm uppercase tracking-[3px] text-[#C97A7A] mb-3'>Beauty Begins Here</p>
@@ -47,12 +42,7 @@ function Hero() {
        </motion.div>
 
        {/* for mobile right side  */}
-       <motion.div
-         initial={{opacity:0, x:40}}
-         animate={{opacity:1, x:0}}
-         transition={{type:"spring", stiffness:50, delay:0.1}}
-         className="md:hidden flex justify-center items-center h-52 relative w-full"
-       >
+       <div className="md:hidden flex justify-center items-center h-52 relative w-full">
          {products_for_grid.slice(0,5).map((p, i) => (
          <motion.div
           key={i}
@@ -80,12 +70,7 @@ function Hero() {
        
         {/* for desktop right side */}
 
-       <motion.div
-         initial={{opacity:0, x:40}}
-         animate={{opacity:1, x:0}}
-         transition={{type:"spring", stiffness:50, delay:0.1}}
-         className="flex-1 hidden md:grid grid-cols-2 md:grid-cols-3 gap-3 max-w-md py-5"
-       >
+       <div className="flex-1 hidden md:grid grid-cols-2 md:grid-cols-3 gap-3 max-w-md py-5">
         {products_for_grid.map((p, i) => (
             <motion.div
               key={i}
@@ -105,7 +90,7 @@ function Hero() {
             </motion.div>
         ))}
 
-       </motion.div>
+       </div>
 
 
 
