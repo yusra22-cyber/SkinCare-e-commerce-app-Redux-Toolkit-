@@ -70,7 +70,7 @@ function Hero() {
           onClick={() => setActiveCard(activeCard === i ? null : i)}
           className="absolute w-29 [@media(max-width:430px)]:w-26 h-44 rounded-2xl overflow-hidden border-2 border-white shadow-lg cursor-pointer"
         >
-        <img src={products_images[p]} alt={products_alt[p]}  className="w-full h-full object-cover" loading="lazy"/>
+        <img src={products_images[p]} alt={products_alt[p]}  className="w-full h-full object-cover" loading="eager" fetchPriority="high"/>
     
         {/* shinjing effect for active card */}
         {activeCard === i && (
@@ -107,7 +107,7 @@ function Hero() {
               src={products_images[p]} 
               alt={products_alt[p]}
              className='w-full h-full object-cover hover:brightness-105 transition' 
-            loading="lazy"
+             loading="eager" fetchPriority="high"
                  />
             </motion.div>
         ))}
