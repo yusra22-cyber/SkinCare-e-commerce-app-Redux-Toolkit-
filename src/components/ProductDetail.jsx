@@ -46,7 +46,7 @@ function ProductDetail() {
           <div className='pt-10 md:pt-0'>
              <p className="block md:hidden text-xs uppercase tracking-[2px] text-[#C97A7A] mb-3">{product.brand} • {product.category}</p>
              <div className="rounded-3xl overflow-hidden bg-white/40 backdrop-blur-md border border-white/50 h-80 md:h-100 lg:h-140">
-             <img src={product.image} alt={product.name} className="w-full h-full object-contain md:object-fill"/>
+             <img src={product.image} alt={product.name} className="w-full h-full object-contain md:object-fill" loading="lazy"/>
             </div>
           </div>
 
