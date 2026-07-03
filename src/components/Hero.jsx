@@ -99,8 +99,9 @@ function Hero() {
              <img 
               src={products_images[p]} 
               alt={p} 
-             className='w-full h-full object-cover hover:brightness-105 transition' />
-             
+             className='w-full h-full object-cover hover:brightness-105 transition' 
+            loading="lazy"
+                 />
             </motion.div>
         ))}
 
