@@ -1,4 +1,4 @@
-import { lazy, useState } from 'react'
+import { lazy,Suspense, useState } from 'react'
 import './App.css'
 import { Route, Router, Routes, useLocation } from 'react-router-dom'
 import Home from './Pages/Home'
@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion'
 import About from './Pages/About'
 import ScrollToTop from './components/ScrollToTop'
 import ToogleMenue from './components/ToogleMenue'
+import Loader from './components/Loader'
 const ProductDetail= lazy(()=>import('./components/ProductDetail'))
 const Cart = lazy(()=>import('./Pages/Cart'))
 const WishList = lazy(()=>import('./Pages/WishList'))
@@ -22,6 +23,7 @@ function App() {
 
     <ScrollToTop/>
      <AnimatePresence mode="wait">
+       <Suspense fallback={<Loader/>}>
       <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Home/>}/>
         <Route path="/products" element={<Products/>} />
@@ -30,6 +32,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/wishList" element={<WishList/>}/>
       </Routes>
+       </Suspense>
      </AnimatePresence>
     </>
   )
