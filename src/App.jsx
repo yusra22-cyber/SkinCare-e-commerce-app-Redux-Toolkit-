@@ -5,11 +5,12 @@ import Home from './Pages/Home'
 import Products from './Pages/Products'
 import { AnimatePresence } from 'framer-motion'
 import About from './Pages/About'
-import Cart from './Pages/Cart'
-import WishList from './Pages/WishList'
-import ProductDetail from './components/ProductDetail'
 import ScrollToTop from './components/ScrollToTop'
 import ToogleMenue from './components/ToogleMenue'
+const ProductDetail= lazy(()=>import('./components/ProductDetail'))
+const Cart = lazy(()=>import('./Pages/Cart'))
+const WishList = lazy(()=>import('./Pages/WishList'))
+
 
 function App() {
   const [count, setCount] = useState(0)
