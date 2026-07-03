@@ -14,7 +14,14 @@ function Hero() {
       toner:"/images/toner.jpg",
       mask:"/images/mask.jpg",
     }
-
+    const products_alt = {
+   serum: "Hydrating facial serum bottle",
+   cleanser: "Gentle facial cleanser product",
+   ordinary: "The Ordinary skincare product bottle",
+   spf: "Daily SPF sunscreen product",
+   toner: "Refreshing facial toner bottle",
+   mask: "Hydrating face mask skincare product",
+   }
     const navigate = useNavigate()
     
   return (
@@ -63,7 +70,7 @@ function Hero() {
           onClick={() => setActiveCard(activeCard === i ? null : i)}
           className="absolute w-29 [@media(max-width:430px)]:w-26 h-44 rounded-2xl overflow-hidden border-2 border-white shadow-lg cursor-pointer"
         >
-        <img src={products_images[p]} className="w-full h-full object-cover" loading="lazy"/>
+        <img src={products_images[p]} alt={products_alt[p]}  className="w-full h-full object-cover" loading="lazy"/>
     
         {/* shinjing effect for active card */}
         {activeCard === i && (
@@ -98,7 +105,7 @@ function Hero() {
             >
              <img 
               src={products_images[p]} 
-              alt={p} 
+              alt={products_alt[p]}
              className='w-full h-full object-cover hover:brightness-105 transition' 
             loading="lazy"
                  />
